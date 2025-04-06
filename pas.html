@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспорт РФ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: #000;
+        }
+        
+        /* Хедер */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-bottom: 1px solid #e5e5ea;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .back-button {
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>') no-repeat center;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .share-button {
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>') no-repeat center;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* Основное содержимое с вашим фото как фон */
+        .passport-container {
+            background: url('фото/gfcgjhn.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            height: 380px;
+            width: 380px;
+        }
+        
+        /* Все содержимое поверх фона */
+        .passport-header,
+        .passport-photo,
+        .passport-info,
+        .details-link {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .passport-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .passport-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        
+        .passport-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .passport-number {
+            font-size: 19px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .passport-photo {
+            width: 120px;
+            height: 160px;
+            border: 1px solid #e0e0e0;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .passport-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .passport-info {
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .info-label {
+            font-weight: 500;
+            color: #555;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        .info-value {
+            font-weight: 500;
+            color: #000;
+        }
+        
+        .details-link {
+            display: block;
+            text-align: center;
+            font-weight: 600;
+            color: #007aff;
+            text-decoration: none;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер с кнопками -->
+    <div class="header">
+        <button class="back-button" onclick="window.location.href='qq.html'"></button>
+        <div class="header-title">Паспорт РФ</div>
+        <button class="share-button"></button>
+    </div>
+    
+    <!-- Основное содержимое паспорта с вашим фото как фон -->
+    <div class="passport-container">
+    </div>
+
+    <script>
+        
+        // Альтернативный вариант для кнопки "Назад", если не работает через onclick
+        document.querySelector('.back-button').addEventListener('click', function() {
+            window.location.href = 'qq.html';
+        });
+    </script>
+</body>
+</html>

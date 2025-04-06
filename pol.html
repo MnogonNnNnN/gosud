@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полис ОМС</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: #000;
+        }
+        
+        /* Хедер */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-bottom: 1px solid #e5e5ea;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .back-button {
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>') no-repeat center;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* Основное содержимое */
+        .oms-container {
+            background: url('фото/jvc.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            height: 300px;
+            width: 380px;
+        }
+        
+        .oms-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .oms-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .oms-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .oms-number {
+            font-size: 24px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 10px;
+            background: #f5f5f7;
+            border-radius: 8px;
+        }
+        
+        .oms-info {
+            margin-bottom: 15px;
+        }
+        
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 3px;
+        }
+        
+        .info-value {
+            font-weight: 500;
+            font-size: 18px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-value.uppercase {
+            text-transform: uppercase;
+        }
+        
+        .details-link {
+            display: block;
+            text-align: center;
+            font-weight: 600;
+            color: #007aff;
+            text-decoration: none;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .present-button {
+            display: block;
+            width: 100%;
+            background: #007aff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 430px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер с кнопкой назад -->
+    <div class="header">
+        <button class="back-button" onclick="window.history.back()"></button>
+        <div class="header-title">Полис ОМС</div>
+        <div style="width: 24px;"></div> <!-- Пустой элемент для выравнивания -->
+    </div>
+    
+    <!-- Основное содержимое полиса -->
+    <div class="oms-container">
+    </div>
+    <a href="pol1.html" class="present-button">Предъявить</a>
+</body>
+</html>
